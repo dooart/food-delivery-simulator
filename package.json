@@ -1,0 +1,19 @@
+{
+  "name": "stilt",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18.6.0"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "collections": "^5.1.13"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
