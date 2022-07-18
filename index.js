@@ -4,7 +4,7 @@ const Simulation = require("./classes/Simulation");
 /**
  * Prints command line instructions
  */
-function printUsage() {
+function printUsage(allowedArgs) {
   console.log("Usage:");
   console.log(`  node index.js [${allowedArgs.join("|")}]`);
 }
@@ -17,7 +17,7 @@ function run() {
   if (process.argv < 3) return printUsage();
 
   const dispatchStrategy = process.argv[2];
-  if (!allowedArgs.includes(dispatchStrategy)) return printUsage();
+  if (!allowedArgs.includes(dispatchStrategy)) return printUsage(allowedArgs);
 
   new Simulation(DispatchStrategyEnum[dispatchStrategy]).run();
 }
